@@ -56,7 +56,11 @@
 #define getcwd _getcwd
 #define chdir _chdir
 #else
+#ifndef __vita__
+// nan
+#else
 #include <sys/ioctl.h>
+#endif
 #include <poll.h>
 #if !defined(__wasi__)
 #include <dlfcn.h>
