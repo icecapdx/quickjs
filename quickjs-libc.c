@@ -57,9 +57,9 @@
 #define chdir _chdir
 #else
 #ifndef __vita__
-// nan
-#else
 #include <sys/ioctl.h>
+#else
+// nan
 #endif
 #include <poll.h>
 #if !defined(__wasi__)
